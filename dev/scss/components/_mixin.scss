@@ -1,0 +1,35 @@
+$breakpoints: (
+//キー  値
+    'xs': 'screen and (max-width: 376px)',
+    'sm': 'screen and (max-width: 768px)', //767px以下（スマホ）用の表示
+    'md': 'screen and (max-width: 1025px)', //1024px以上（タブレット・PC）用の表示
+    'xl': 'screen and (min-width: 1026px)'
+
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+//map-get(マップ型変数, キー)で値を取得
+    @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+    }
+}
+@include mq(md){
+    .is-sp{
+        display: none;
+    }
+}
+@include mq(sm){
+    .is-pc{
+        display: none;
+    }
+}
+
+// color
+
+
+// font-size
+
+
+//font-weight
