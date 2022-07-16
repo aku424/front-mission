@@ -1,7 +1,19 @@
+html{
+    font-size: 10px;
+}
+*{
+    line-height: 1.75;
+    font-size: $fz-base_pc;
+    color: $c-01;
+}
 a{
     text-decoration: none;
     transition: all .3s;
-    &:hover{
-        
-    }
+}
+
+.inner{
+    box-sizing: content-box;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 20px;
 }
