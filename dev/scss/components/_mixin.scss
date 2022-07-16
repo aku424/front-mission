@@ -27,9 +27,23 @@ $breakpoints: (
 }
 
 // color
-
+$c-01: #0A1133;
+$c-02: #F0F0F0;
+$c-03: #043847;
+$c-04: #E68F23;
+$c-05: #D9912B;
+$c-06: #fff;
+$c-07: #2EA7C8;
 
 // font-size
+$fz-h2_pc: 3.6rem;
+$fz-h3_pc: 2.8rem;
+$fz-txt_01_pc: 2.0rem;
+$fz-base_pc: 1.6rem;
+$fz-tag: 1.2rem;
 
 
-//font-weight
+//width
+$w-01: calc(100vw - ((100vw - 960px) / 2));
+
+

@@ -1,0 +1,103 @@
+.header{
+    background: $c-06;
+    &-top{
+        .header{
+            &-inner{
+                background-color: $c-07;
+            }
+
+            &-nav{
+                &__item{
+                    a{
+                        color: $c-06;
+                        &::before{
+                            background-color: $c-06;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        width: $w-01;
+        margin-left: auto;
+        padding-left: 20px;
+        box-sizing: content-box;
+
+    }
+    &-logo{
+        a{
+            display: block;
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+
+    &-nav{
+        ul{
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        &__item{
+            display: flex;
+            height: 100%;
+            margin-left: 20px;
+            align-items: center;
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+            a{
+                color: $c-01;
+                padding: 4px;
+                position: relative;
+
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 0%;
+                    height: 2px;
+                    background-color: $c-01;
+                    bottom: -2px;
+                    right: 0;
+                    transition: width .3s;
+                }
+                
+                &:hover{
+                    &::before{
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+
+            &--contact{
+                display: block;
+                a{
+                    display: flex;
+                    align-items: center;
+                    border-radius: 8px 0 0 8px;
+                    height: 100%;
+                    padding: 0 20px;
+                    background-color: $c-05;
+                    color: $c-06;
+                    &::before{
+                        display: none;
+                    }
+
+                    &:hover{
+                        background-color: $c-06;
+                        color: $c-05;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
