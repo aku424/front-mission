@@ -196,7 +196,13 @@ a {
   background: linear-gradient(135deg, #1e608a 0%, #16677d 50%, #2ca6c6 100%);
 }
 
-.m-more-btn::before, .m-more-btn::after, .m-more-btn a::before, .m-more-btn a::after {
+.m-more-btn {
+  position: relative;
+  display: block;
+  width: 184px;
+}
+
+.m-more-btn::before, .m-more-btn::after {
   position: absolute;
   content: "";
   -webkit-transition: -webkit-transform .5s;
@@ -204,17 +210,6 @@ a {
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
   background-color: #0A1133;
-}
-
-.m-more-btn {
-  position: relative;
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.m-more-btn::before, .m-more-btn::after {
   left: 0;
   width: 100%;
   height: 2px;
@@ -260,13 +255,20 @@ a {
 
 .m-more-btn a {
   display: block;
-  width: 184px;
-  padding: 18px 0;
   text-align: center;
   position: relative;
+  width: 100%;
+  padding: 18px 0;
 }
 
 .m-more-btn a::before, .m-more-btn a::after {
+  position: absolute;
+  content: "";
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  background-color: #0A1133;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   top: 0;
@@ -307,6 +309,96 @@ a {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
+}
+
+.m-more-btn--contact {
+  width: 232px;
+}
+
+.m-more-btn--contact:before, .m-more-btn--contact::after {
+  position: absolute;
+  content: "";
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  background-color: #CC8829;
+}
+
+.m-more-btn--contact a:before, .m-more-btn--contact a::after {
+  position: absolute;
+  content: "";
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  background-color: #CC8829;
+}
+
+.m-h2-ttl {
+  display: block;
+  text-align: center;
+  font-size: 2.8rem;
+  color: #0A1133;
+  font-weight: 600;
+}
+
+.m-h2-ttl > span {
+  display: block;
+  font-size: 2rem;
+}
+
+.m-h2-ttl > b {
+  color: #2EA7C8;
+  font-size: 4.8rem;
+  line-height: 0.75;
+}
+
+.m-h3-ttl--01, .m-h3-ttl--02 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.m-h3-ttl--01 span {
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Times New Roman ,serif;
+  font-style: italic;
+  color: #0A113399;
+  font-size: 1.2rem;
+  padding-left: 24px;
+}
+
+.m-h3-ttl--01 span::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 16px;
+  background-color: #2EA7C8;
+  left: 0;
+  top: 50%;
+}
+
+.m-h3-ttl--02 {
+  position: relative;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.m-h3-ttl--02::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 28px;
+  background-color: #2EA7C8;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 0;
 }
 
 .header {

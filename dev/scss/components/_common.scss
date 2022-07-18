@@ -138,17 +138,17 @@ a{
 }
 
 //more-btn
-%more-btn__ba{
+@mixin more-btn__ba($bg){
     position: absolute;
     content: "";
     transition: transform .5s;
-    background-color: $c-01;
+    background-color: $bg;
 }
 
 .m-more-btn{
     position: relative;
     display: block;
-    width: fit-content;
+    width: 184px;
 
     //borderのホバー時の動き
     @mixin more-btn__border--h ($scale, $position) {
@@ -165,7 +165,7 @@ a{
 
     &::before,
     &::after{
-        @extend %more-btn__ba;
+        @include more-btn__ba($c-01);
         left: 0;
         width: 100%;
         height: 2px;
@@ -197,14 +197,15 @@ a{
 
     a{
         display: block;
-        width: 184px;
-        padding: 18px 0;
         text-align: center;
         position: relative;
+        width: 100%;
+        padding: 18px 0;
+
 
         &::before,
         &::after{
-            @extend %more-btn__ba;
+            @include more-btn__ba($c-01);
             transform: scaleY(0);
             top: 0;
             width: 2px;
@@ -230,5 +231,93 @@ a{
             
         }
     }
+
+    &--contact{
+        width: 232px;
+        &:before,
+        &::after{
+            @include more-btn__ba($c-08);
+        }
+        a{
+            &:before,
+            &::after{
+                @include more-btn__ba($c-08);
+            }
+        }
+
+    }
 }
 
+//タイトル
+//h2-ttl
+.m-h2-ttl{
+    display: block;
+    text-align: center;
+    font-size: $fz-h2_pc;
+    color: $c-01;
+    font-weight: 600;
+
+    &>span{
+        display: block;
+        font-size: $fz-txt_01_pc;
+    }
+
+    &>b{
+        color: $c-07;
+        font-size: $fz-h2_pc--sub;
+        line-height: 0.75;
+    }
+}
+
+//h3
+%m-h3{
+    font-size: $fz-h3_pc;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.m-h3-ttl{
+    &--01{
+        @extend %m-h3;
+
+        span{
+            position: relative;
+            display: block;
+            width: fit-content;
+            font-family: Times New Roman ,serif;
+            font-style: italic;
+            color: $c-09;
+            font-size: $fz-reason--sub;
+            padding-left: 24px;
+
+            &::before{
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 16px;
+                background-color: $c-07;
+                left: 0;
+                top: 50%;
+            }
+        }
+    }
+
+    &--02{
+        position: relative;
+        text-align: center;
+        padding-bottom: 24px;
+        @extend %m-h3;
+
+        &::before{
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 28px;
+            background-color: $c-07;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            bottom: 0;
+            
+        }
+    }
+}
