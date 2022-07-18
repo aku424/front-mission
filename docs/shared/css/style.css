@@ -177,8 +177,8 @@ a {
 }
 
 .m-c-btn__item:first-child {
-  background: #1e608a;
-  background: linear-gradient(135deg, #1e608a 0%, #16677d 50%, #2ca6c6 100%);
+  background: #94621d;
+  background: linear-gradient(315deg, #94621d 0%, #d58e2b 50%, #ec9c2d 100%);
 }
 
 .m-c-btn__item:first-child::after {
@@ -187,8 +187,8 @@ a {
 }
 
 .m-c-btn__item:last-child {
-  background: #2ca6c6;
-  background: linear-gradient(135deg, #2ca6c6 0%, #16677d 50%, #1e608a 100%);
+  background: #94621d;
+  background: linear-gradient(135deg, #94621d 0%, #d58e2b 50%, #ec9c2d 100%);
 }
 
 .m-c-btn__item:last-child::after {
@@ -196,9 +196,13 @@ a {
   background: linear-gradient(135deg, #1e608a 0%, #16677d 50%, #2ca6c6 100%);
 }
 
-.m-more-btn a::before, .m-more-btn a::after {
+.m-more-btn::before, .m-more-btn::after, .m-more-btn a::before, .m-more-btn a::after {
   position: absolute;
   content: "";
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
   background-color: #0A1133;
 }
 
@@ -211,35 +215,21 @@ a {
 }
 
 .m-more-btn::before, .m-more-btn::after {
-  position: absolute;
-  content: "";
-  background-color: #0A1133;
-  -webkit-transition: transfrom .5s;
-  transition: transfrom .5s;
+  left: 0;
   width: 100%;
   height: 2px;
 }
 
 .m-more-btn::before {
   top: 0;
-  left: 0;
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
 }
 
 .m-more-btn::after {
   bottom: 0;
-  left: 0;
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
 }
 
 .m-more-btn:hover::before {
@@ -277,36 +267,24 @@ a {
 }
 
 .m-more-btn a::before, .m-more-btn a::after {
-  -webkit-transition: transfrom .3s;
-  transition: transfrom .3s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  top: 0;
   width: 2px;
   height: 100%;
 }
 
 .m-more-btn a::before {
-  top: 0;
   left: 0;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
 }
 
 .m-more-btn a::after {
-  top: 0;
   right: 0;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  transform-origin: top;
 }
 
 .m-more-btn a:hover::before {
@@ -336,6 +314,7 @@ a {
   padding-left: 20px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  max-width: 1366px;
 }
 
 .header-top .header-inner {
@@ -429,7 +408,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   height: 100%;
   padding: 0 20px;
   background-color: #D9912B;
