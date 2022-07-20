@@ -66,6 +66,10 @@ a {
   padding: 0 20px;
 }
 
+section {
+  margin-bottom: 160px;
+}
+
 .m-mv {
   margin-top: 80px;
 }
@@ -341,6 +345,7 @@ a {
   font-size: 2.8rem;
   color: #0A1133;
   font-weight: 600;
+  margin-bottom: 40px;
 }
 
 .m-h2-ttl > span {

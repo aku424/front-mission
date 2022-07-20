@@ -19,6 +19,10 @@ a{
     padding: 0 20px;
 }
 
+section{
+    margin-bottom: 160px;
+}
+
 //mv
 .m-mv{
     margin-top: 80px;
@@ -256,6 +260,7 @@ a{
     font-size: $fz-h2_pc;
     color: $c-01;
     font-weight: 600;
+    margin-bottom: 40px;
 
     &>span{
         display: block;
