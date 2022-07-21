@@ -1,0 +1,61 @@
+.strength{
+    .m-mv{
+        &-inner{
+            background-image: url(../../../docs/shared/img/mv-strength-01.png);
+        }
+    }
+
+    .reason{
+        &-lead{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        &-item{
+            display: flex;
+            width: 100%;
+            align-items: flex-start;
+            margin-right: auto;
+            margin-bottom: 200px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+
+            &--odd{
+                flex-direction: row-reverse;
+                margin-right: 0;
+                margin-left: auto;
+
+                &>.reason-item__img{
+                    margin-left: 0;
+                    margin-right: -100px;
+                }
+            }
+
+            &__img{
+                max-width: 344px;
+                max-height: 344px;
+                min-width: 280px;
+                min-height: 280px;
+                width: 25.18vw;
+                height: 25.18vw;
+                overflow: hidden;
+                margin-left: -100px;
+
+                img{
+                    height: 100%;
+                    width: auto;
+                }
+            }
+
+            &__box{
+                background-color: $c-06;
+                margin-top: 40px;
+                padding: 80px 140px;
+                max-width: 67.57vw;
+            }
+        }
+    }
+}

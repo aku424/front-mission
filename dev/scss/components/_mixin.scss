@@ -53,7 +53,15 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
 
 
 //width
-$w-01: calc(100vw - ((100vw - 960px) / 2));
+// $w-01: calc(100vw - ((100vw - 960px) / 2));
+
+%w-01{
+    @media screen and (min-width:1000px) {
+        width: calc(100vw - ((100vw - 960px) / 2));
+    }
+
+    width: calc(100vw - 20px);
+}
 
 %sec-bottom{
     margin-bottom: 160px;

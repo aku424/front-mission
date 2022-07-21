@@ -1,14 +1,15 @@
 .header{
     background: $c-06;
-    padding-left: 20px;
+    // padding-left: 20px;
     box-sizing: content-box;
-    max-width: 1366px;
+    margin: 0 auto;
+    
     &-top{
         .header{
             &-inner{
                 background-color: $c-07;
             }
-
+            
             &-nav{
                 &__item{
                     a{
@@ -24,11 +25,22 @@
     &-inner{
         display: flex;
         justify-content: space-between;
-        width: $w-01;
+        max-width: 1366px;
         margin-left: auto;
+        padding-left: 20px;
+        box-sizing: content-box;
+        @extend %w-01;
 
+        @media screen and (min-width:1366px) {
+            // padding-left: 20px;
+            margin: 0 auto;
+        }
     }
     &-logo{
+        @media screen and (min-width:1366px) {
+            margin-left: 92px;
+        }
+
         a{
             display: block;
             &:hover{
@@ -38,6 +50,11 @@
     }
     
     &-nav{
+        @media screen and (min-width:1366px) {
+            margin-right: -100px;
+            
+        }
+        margin-right: 0;
         ul{
             display: flex;
             height: 100%;
