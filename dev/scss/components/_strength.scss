@@ -51,7 +51,7 @@
             }
 
             &__box{
-                background-color: $c-06;
+                background-color: rgba($color: $c-06, $alpha: .8);
                 margin-top: 40px;
                 padding: 80px 140px;
                 max-width: 67.57vw;

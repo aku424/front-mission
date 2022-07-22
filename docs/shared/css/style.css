@@ -419,6 +419,45 @@ section {
   bottom: 0;
 }
 
+.m-lead {
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 1.6rem;
+}
+
+.m-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 48px;
+}
+
+.m-card-item {
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 8px #00000029;
+          box-shadow: 0 3px 8px #00000029;
+}
+
+.m-card-item__img {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.m-card-item__title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  padding: 16px;
+}
+
+.m-card-item__text {
+  font-size: 1.6rem;
+  padding: 0 16px 40px;
+}
+
 .header {
   background: #fff;
   -webkit-box-sizing: content-box;
@@ -715,8 +754,62 @@ section {
 }
 
 .strength .reason-item__box {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   margin-top: 40px;
   padding: 80px 140px;
   max-width: 67.57vw;
+}
+
+.business .m-mv-inner {
+  background-image: url(../../../docs/shared/img/mv-business-01.png);
+}
+
+.business .philosophy {
+  background-image: url(../../../docs/shared/img/bg-business-01.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+}
+
+.business .philosophy::before, .business .philosophy::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+
+.business .philosophy::before {
+  background-color: rgba(4, 56, 71, 0.5);
+}
+
+.business .philosophy::after {
+  background-image: url(../../../docs/shared/img/bg-business-02.png);
+}
+
+.business .philosophy__title, .business .philosophy__list, .business .philosophy__list--item {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.business .philosophy__title {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.business .philosophy__list--item {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.business .philosophy__list--item:last-child {
+  margin-bottom: 0;
 }

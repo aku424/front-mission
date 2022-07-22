@@ -331,3 +331,41 @@ section{
         }
     }
 }
+
+//リード文
+.m-lead{
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 1.6rem;
+}
+
+//card
+.m-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 48px;
+
+    &-item{
+        border-radius: 8px;
+        box-shadow: 0 3px 8px #00000029;
+        
+        &__img{
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+        
+        &__title{
+            text-align: center;
+            font-size: $fz-h3_pc;
+            font-weight: bold;
+            padding: 16px;
+        }
+
+        &__text{
+            font-size: 1.6rem;
+            padding: 0 16px 40px;
+        }
+    }
+}
+
