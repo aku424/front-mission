@@ -80,21 +80,7 @@
                 }
 
                 &--title{
-                    position: relative;
-                    text-align: center;
-                    margin-bottom: 40px;
-                    font-size: $fz-h3_pc;
-
-                    &::before{
-                        position: absolute;
-                        content: "";
-                        height: 2px;
-                        width: 40px;
-                        background-color: $c-07;
-                        transform: translate(-50%, -50%);
-                        left: 50%;
-                        bottom: -20px;
-                    }
+                    @extend %m-title-02;
                 }
             }
 

@@ -51,6 +51,25 @@ img {
   }
 }
 
+.recruit .feature-lyt__text--title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+}
+
+.recruit .feature-lyt__text--title::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 40px;
+  background-color: #2EA7C8;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: -20px;
+}
+
 html {
   font-size: 10px;
 }
@@ -456,6 +475,43 @@ section {
 .m-card-item__text {
   font-size: 1.6rem;
   padding: 0 16px 40px;
+}
+
+.m-thum {
+  margin-top: 80px;
+}
+
+.m-thum .inner {
+  position: relative;
+  background-image: url(../../../docs/shared/img/bg-common-02.png);
+  background-size: cover;
+  background-position: center;
+  padding-top: 56.25%;
+}
+
+.m-thum-title {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.m-thum-title b {
+  font-size: 2.8rem;
+  font-weight: bold;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+}
+
+.m-thum-title b > span {
+  font-size: 4rem;
+  color: #fff;
 }
 
 .header {
@@ -1050,25 +1106,6 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   display: block;
-}
-
-.recruit .feature-lyt__text--title {
-  position: relative;
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.8rem;
-}
-
-.recruit .feature-lyt__text--title::before {
-  position: absolute;
-  content: "";
-  height: 2px;
-  width: 40px;
-  background-color: #2EA7C8;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  left: 50%;
-  bottom: -20px;
 }
 
 .recruit .feature-lyt__img img {

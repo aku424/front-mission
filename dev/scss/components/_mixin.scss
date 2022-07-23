@@ -46,6 +46,7 @@ $fz-c-btn: 3.6rem;
 $fz-h3_pc: 2.8rem;
 $fz-txt_01_pc: 2.0rem;
 $fz-txt_02_pc: 2.8rem;
+$fz-txt_03_pc: 4.0rem;
 $fz-base_pc: 1.6rem;
 $fz-tag: 1.2rem;
 $fz-reason--sub: 1.2rem;
@@ -66,4 +67,22 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
 
 %sec-bottom{
     margin-bottom: 160px;
+}
+
+%m-title-02{
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: $fz-h3_pc;
+
+    &::before{
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 40px;
+        background-color: $c-07;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: -20px;
+    }
 }

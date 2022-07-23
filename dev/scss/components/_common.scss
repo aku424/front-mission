@@ -369,3 +369,39 @@ section{
     }
 }
 
+//投稿系のMV
+.m-thum{
+    margin-top: 80px;
+
+    .inner{
+        position: relative;
+        background-image: url(../../../docs/shared/img/bg-common-02.png);
+        background-size: cover;
+        background-position: center;
+        padding-top: 56.25%;
+    }
+
+
+    &-title{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        font-size: $fz-txt_01_pc;
+        color: $c-06;
+        
+        b{
+            font-size: $fz-txt_02_pc;
+            font-weight: bold;
+            display: block;
+            width: fit-content;
+            color: $c-06;
+            
+            &>span{
+                font-size: $fz-txt_03_pc;
+                color: $c-06;
+            }
+        }
+    }
+
+}
