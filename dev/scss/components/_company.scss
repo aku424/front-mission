@@ -1,0 +1,131 @@
+.company{
+
+.m-mv-inner{
+    background-image: url(../../..//docs/shared/img/mv-company-01.png);
+}
+
+.message{
+    &-contents{
+        display: flex;
+        margin-bottom: 80px;
+    }
+    &__img{
+        flex: 40% 1 1;
+
+        &--img{
+            margin: 0 0 16px 0;
+
+            img{
+                object-fit: cover;
+            }
+        }
+
+        &--name{
+            font-size: $fz-base_pc;
+
+            b{
+                display: block;
+                font-size: $fz-txt_02_pc;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__info{
+        flex: 60% 1 1;
+        padding-top: 24px;
+        padding-left: 24px;
+
+        &--text{
+            margin-bottom: 65px;
+        }
+    }
+
+    &-career{
+        &__title{
+            position: relative;
+            font-size: $fz-h3_pc;
+            font-weight: bold;
+            padding-bottom: 3px;
+
+            &::before,
+            &::after{
+                position: absolute;
+                content: "";
+                height: 2px;
+                bottom: 0;
+                left: 0;
+            }
+
+            &::before{
+                width: 100%;
+                background-color: rgba($color: $c-03, $alpha: .4);
+            }
+
+            &::after{
+                width: 25%;
+                background-color: $c-07;
+            }
+        }
+
+        &__contents{
+            padding: 40px 16px 0;
+
+            &-item{
+                display: flex;
+                margin-bottom: 24px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                @extend %company-dl;
+            }
+        }
+    }
+}
+%company-dl{
+    dt{
+        flex: 25% 1 1;
+    }
+
+    dd{
+        flex: 75% 1 1;
+    }
+}
+
+.overview{
+    &-list{
+        &__item{
+            display: flex;
+            @extend %company-dl;
+            padding: 0 24px 24px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #B0B2BB;
+
+            &:last-child{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+            &--map{
+                position: relative;
+                overflow: hidden;
+                margin-top: 24px;
+                padding-top: 56.25%;
+
+                iframe{
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+}
