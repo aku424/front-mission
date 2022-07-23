@@ -36,6 +36,7 @@ $c-06: #fff;
 $c-07: #2EA7C8;
 $c-08: #CC8829;
 $c-09: #0A113399;
+$c-10: #B5B7C1;
 
 // font-size
 $fz-h1_pc: 3.6rem;
@@ -53,7 +54,6 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
 
 
 //width
-// $w-01: calc(100vw - ((100vw - 960px) / 2));
 
 %w-01{
     @media screen and (min-width:1000px) {
