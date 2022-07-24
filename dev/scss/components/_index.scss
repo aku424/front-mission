@@ -112,4 +112,38 @@
         }
     }
 }
+
+.lead{
+    position: relative;
+    margin-bottom: 265px;
+
+    .inner{
+        position: relative;
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        width: calc((375 / 1366) * 100vw);
+        height: calc((375 / 1366) * 100vw);
+        background-image: url(../../../docs/shared/img/icon-index-01.png);
+        background-position: center;
+        background-size: cover;
+        top: -48px;
+        left: 50%;
+    }
+    &-title{
+        text-align: center;
+        font-size: $fz-txt_02_pc;
+        margin-bottom: 40px;
+    }
+
+    .m-lead{
+        margin-bottom: 0;
+    }
+
+    .m-span-title{
+        right: 0px;
+        top: 50%;
+    }
+}
 }
