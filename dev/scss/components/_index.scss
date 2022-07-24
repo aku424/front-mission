@@ -1,1 +1,115 @@
+.index{
+    margin-top: -80px;
 
+.mv{
+    position: relative;
+    background-image: url(../../../docs/shared/img/mv-index-01.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56.25vw;
+
+    .inner{
+        position: relative;
+        height: 100%;
+    }
+
+    &-text{
+        position: absolute;
+        bottom: 160px;
+        left: 0;
+
+        &__title,
+        &__title b{
+            color: $c-06;
+        }
+
+        &__title{
+            font-size: $fz-txt_01_pc;
+
+            b{
+                display: block;
+                width: fit-content;
+                font-size: $fz-txt_05_pc;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &-news{
+        position: absolute;
+        transform: translateY(50%);
+        background-color: $c-13;
+        right: 0;
+        bottom: 0;
+        width: 80%;
+        max-width: 683px;
+
+        a{
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 19px 24px;
+
+            >*{
+                transition: opacity .3s;
+                color: $c-06;
+            }
+        }
+        
+        &-title{
+            position: relative;
+            font-size: $fz-base_pc;
+            margin-right: 72px;
+            
+
+
+            &::before{
+                position: absolute;
+                content : "";
+                transform: translate(100%, -50%);
+                top: 50%;
+                width: 40px;
+                height: 1px;
+                background-color: $c-06;
+                right: -16px;
+            }
+
+        }
+        time{
+            font-size: $fz-tag;
+            display: block;
+            width: fit-content;
+            margin-right: 16px;
+        }
+
+        p{
+            font-size: $fz-base_pc;
+        }
+
+        &::before{
+            position: absolute;
+            content : "";
+            top: 65%;
+            right: 15%;
+            width: 12px;
+            height: 12px;
+            border-right: 4px solid $c-06;
+            border-bottom: 4px solid $c-06;
+            transition: right .3s;
+            transform: rotate(-45deg) translate(100%, -50%);
+        }
+
+        &:hover{
+            >*{
+                opacity: .7;
+            }
+            &::before{
+                right: 10%;
+            }
+
+        }
+    }
+}
+}

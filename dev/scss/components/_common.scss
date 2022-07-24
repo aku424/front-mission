@@ -405,3 +405,13 @@ section{
     }
 
 }
+
+//lyt
+.m-lyt-01{
+    @media screen and (max-width: 1366px){
+        width: calc(100vw - ((100vw - 960px) / 2));
+    }
+    width: calc(100vw - ((100vw - 960px) / 2));
+    display: grid;
+
+}
