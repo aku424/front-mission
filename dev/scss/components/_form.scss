@@ -1,0 +1,254 @@
+.m-form{
+    &-item{
+        margin-bottom: 40px;
+    }
+
+    &-title{
+        font-size: $fz-txt_04_pc;
+        border-bottom: 2px solid $c-10;
+        margin-bottom: 16px;
+    }
+    
+    &__label{
+        display: inline-block;
+        font-size: $fz-tag;
+        color: $c-06;
+        background-color: $c-11;
+        line-height: 1;
+        padding: 4px 6px;
+        border-radius: 4px;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    &-list{
+        padding: 0 16px;
+
+        &__item{
+            margin-bottom: 16px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &>label{
+                display: block;
+                margin-bottom: 6px;
+                width: fit-content;
+            }
+
+            %form-area{
+                border: 1px solid $c-10;
+                border-radius: 4px;
+                padding: 4px 6px;
+            }
+
+            &>input{
+                @extend %form-area;
+                width: 50%;
+                height: 48px;
+                
+            }
+
+            &>textarea{
+                @extend %form-area;
+                resize: none;
+                width: 100%;
+                height: 160px;
+            }
+
+            &>select{
+                @extend %form-area;
+            }
+            
+            &--radio{
+                position: relative;
+                %form-radio{
+                    position: absolute;
+                    content: "";
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                    top: 50%;   
+                }
+
+                input{
+                    @extend %form-radio;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 0%;
+                    border: none;
+                    background-color: inherit;
+                    display: inline;
+                    left: 12px;
+                    margin: 0;
+                    padding: 0;
+                    z-index: -1;
+                }
+                
+                label{
+                    position: relative;
+                    width: calc(735px * 0.15);
+                    background-color: rgba($color: $c-12, $alpha: .1);
+                    border-radius: 4px;
+                    padding: 6px 12px 6px 32px;
+
+
+                    &::before{
+                        @extend %form-radio;
+                        width: 16px;
+                        height: 16px;
+                        background-color: $c-06;
+                        border: 1px solid $c-10;
+                        left: 8px;
+                    }
+                    
+                    &::after{
+                        @extend %form-radio;
+                        display: none;
+                        width: 8px;
+                        height: 8px;
+                        background-color: $c-01;
+                        border: 1px solid $c-01;
+                        left: 12px;
+                    }
+                }
+
+                input{
+                    &:checked{
+                        +label{
+                            background-color: $c-03;
+                            color: $c-06;
+                            &::after{
+                                display: block;
+                            }
+                        }
+                    }
+                    &:focus-visible{
+                        outline:none;
+                        +label{
+                            outline: 2px solid #015ECC;
+                        }
+                    }
+                }
+            }
+
+            &--old{
+                input{
+                    width: calc(735px * 0.1);
+                }
+            }
+
+            &--file{
+                position: relative;
+                input{
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                    top: 50%;
+                    left: 0%;
+                    z-index: -1;
+                }
+                label{
+
+                }
+                
+                &>p{
+                    display: block;
+                    width: fit-content;
+                    border: 1px solid $c-10;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    background-color: $c-06;
+                }
+
+                input{
+                    &:focus-visible{
+                        outline:none;
+                        +p{
+                            border: 2px solid #015ECC;
+                        }
+                    }
+                }
+            }
+
+            &--select{
+
+            }
+
+            &--check{
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                margin: 0 auto;
+                
+                &>label{
+                    margin-bottom: 0;
+                    padding-left: 24px;
+                }
+
+                &>input{
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    transform: translateY(-50%);
+                    margin: 0;
+                    top: 50%;
+                    left: 0;
+
+                    
+                    &::before,
+                    &::after{
+                        position: absolute;
+                        content:"";
+                        top: 50%;
+                        
+                    }
+                    
+                    &::before{
+                        top: 0;
+                        left: 0;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 2px;
+                        border: 1px solid $c-10;
+                        background-color: $c-06;
+                    }
+
+                    &::after{
+                        display: none;
+                        width: 10px;
+                        height: 6px;
+                        border-bottom: 2px solid $c-10;
+                        border-left: 2px solid $c-10;
+                        transform: rotate(-45deg);
+                        left: 3px;
+                        top: 3px;
+                    }
+
+                    &:checked{
+                        &::after{
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            &--btn{
+                width: calc(735px * .35);
+                margin: 0 auto;
+
+                >input{
+                    width: 100%;
+                    background-color: $c-06;
+                    transition: background .3s, color .3s;
+
+                    &:hover{
+                        background-color: $c-10;
+                        color: $c-06;
+                    }
+                }
+            }
+        }
+    }
+}
