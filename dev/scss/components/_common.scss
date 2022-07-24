@@ -154,10 +154,17 @@ section{
     background-color: $bg;
 }
 
+
 .m-more-btn{
     position: relative;
     display: block;
     width: 184px;
+
+    &__wrap{
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
 
     //borderのホバー時の動き
     @mixin more-btn__border--h ($scale, $position) {
@@ -260,23 +267,7 @@ section{
 //タイトル
 //h2-ttl
 .m-h2-ttl{
-    display: block;
-    text-align: center;
-    font-size: $fz-h2_pc;
-    color: $c-01;
-    font-weight: 600;
-    margin-bottom: 40px;
-
-    &>span{
-        display: block;
-        font-size: $fz-txt_01_pc;
-    }
-
-    &>b{
-        color: $c-07;
-        font-size: $fz-h2_pc--sub;
-        line-height: 0.75;
-    }
+    @extend %m-h2-ttl;
 }
 
 //h3
@@ -417,13 +408,17 @@ section{
     grid-template-rows: 80px auto 24px;
 
     &__box{
+        position: relative;
         grid-column: 1/3;
         grid-row: 1/3;
         background-color: rgba($color: $c-06, $alpha: .5);
-        // padding: 40px 264px 96px calc(((100% - ((100vw - 960px) / 2)) - 50vw) / 2);
-        padding: 40px 264px 96px calc(((100vw - 960px) / 2));
+        padding: 40px 264px 96px calc(((100vw - 960px) / 2) + 70px);
+        
+        @media screen and (max-width:980px){
+            padding: 40px 264px 96px 60px;
+        }
     }
-
+    
     &__img{
         position: relative;
         z-index: 1;
@@ -431,9 +426,30 @@ section{
         grid-row: 2/4;
     }
     
+    &__title{
+        @extend %m-h2-ttl;
+        text-align-last: left;
+    }
+
+    &__text{
+        margin-bottom: 40px;
+    }
+
+    &:nth-child(odd){
+        .m-span-title{
+            left:calc(((100vw - 960px) / 2) - 20px);
+            top: 45%;
+
+            @media screen and (max-width:980px){
+                left: -10px;
+            }
+        }
+    }
+    
     &:nth-child(even){
         grid-template-columns: auto calc((100% - 50vw) / 2) 50vw;
         grid-template-rows: 24px auto 80px;
+        margin-left: auto;
 
         .m-lyt-01{
             &__img{
@@ -444,6 +460,21 @@ section{
             &__box{
                 grid-column: 2/5;
                 grid-row: 2/5;
+                padding: 40px  calc(((100vw - 960px) / 2)) 96px 264px;
+
+                @media screen and (max-width:980px){
+                    padding: 40px 60px 96px 264px;
+                }
+
+                .m-span-title{
+                    left: none;
+                    right:calc(((100vw - 960px) / 2) - 20px);
+                    top: 45%;
+
+                    @media screen and (max-width:980px){
+                        right: -10px;
+                    }
+                }
             }
         }
     }
@@ -456,6 +487,7 @@ section{
     color: $c-07;
     font-size: $fz-tag;
     transform: rotate(90deg);
+    display: inline-block;
     
     &::before{
         position: absolute;

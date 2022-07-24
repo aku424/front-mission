@@ -18,7 +18,7 @@
     &-text{
         position: absolute;
         bottom: 160px;
-        left: 0;
+        left: 20px;
 
         &__title,
         &__title b{
@@ -144,6 +144,70 @@
     .m-span-title{
         right: 0px;
         top: 50%;
+    }
+}
+
+.recruit{
+    background-image: url(../../../docs/shared/img/bg-index-01.png);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+
+    .m-h2-ttl,
+    .m-h2-ttl span,
+    &-text{
+        color: $c-06;
+    }
+
+    &-text{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .m-more-btn{
+        &::before,
+        &::after{
+            background-color: $c-06;
+        }
+        
+        a{
+            color: $c-06;
+            &::before,
+            &::after{
+                background-color: $c-06;
+            }
+        }
+
+        &:last-child{
+            &::before,
+            &::after{
+                background-color: $c-08;
+            }
+            
+            a{
+                &::before,
+                &::after{
+                    background-color: $c-08;
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    .inner{
+        background-color: rgba(245, 245, 245, .9);
+        box-shadow: 0px 0px 100px rgba(245, 245, 245, .9);
+        padding: 42px 123px 38px 32px;
+    }
+
+    .m-h2-ttl{
+        text-align-last: left;
+    }
+
+    &-box{
+        display: flex;
+        justify-content: space-between;
     }
 }
 }

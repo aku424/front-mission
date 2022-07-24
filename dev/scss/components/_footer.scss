@@ -63,28 +63,14 @@
             }
         }
 
-        &__link{
-            display: flex;
-            
+        &__link{            
             &--item{
                 font-size: $fz-tag;
+                transition: opacity .3s;
                 &:hover{
                     opacity: .7;
                 }
-                &:first-child{
-                    position: relative;
-                    margin-right: 28px;
 
-                    &::before{
-                        position: absolute;
-                        content: "";
-                        width: 1px;
-                        height: 100%;
-                        background-color: $c-06;
-                        top: 0;
-                        right: -14px;
-                    }
-                }
             }
         }
     }

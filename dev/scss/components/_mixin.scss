@@ -91,3 +91,23 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
         bottom: -20px;
     }
 }
+
+%m-h2-ttl{
+    display: block;
+    text-align: center;
+    font-size: $fz-h2_pc;
+    color: $c-01;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    &>span{
+        display: block;
+        font-size: $fz-txt_01_pc;
+    }
+
+    &>b{
+        color: $c-07;
+        font-size: $fz-h2_pc--sub;
+        line-height: 0.75;
+    }
+}
