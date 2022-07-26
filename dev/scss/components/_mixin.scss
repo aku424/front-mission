@@ -112,3 +112,31 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
         line-height: 0.75;
     }
 }
+
+%pagination{
+    display: flex;
+
+    .post-pagination__item{
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid $c-10;
+            color: $c-10;
+            font-size: $fz-txt_06_pc;
+            font-weight: bold;
+            transition: background .3s, color .3s border .3s;
+
+            &:hover{
+                @extend %pagination-action;
+            }
+        }
+    }
+}
+
+%pagination-action{
+    border: 1px solid $c-07;
+    background-color: $c-07;
+    color: $c-06;
+}
