@@ -1836,6 +1836,15 @@ section {
   border: 1px solid #B5B7C1;
 }
 
+.form .m-mv-inner {
+  background-image: url(../../../docs/shared/img/mv-common-01.png);
+}
+
+.m-form-wrap {
+  padding: 80px 10%;
+  background-color: #fff;
+}
+
 .m-form-item {
   margin-bottom: 40px;
 }
@@ -1971,17 +1980,8 @@ section {
   position: relative;
 }
 
-.m-form-list__item--file input {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  top: 50%;
-  left: 0%;
-  z-index: -1;
-}
-
-.m-form-list__item--file > p {
+.m-form-list__item--file-label {
+  position: relative;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1992,11 +1992,26 @@ section {
   background-color: #fff;
 }
 
-.m-form-list__item--file input:focus-visible {
-  outline: none;
+.m-form-list__item--file-label input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
-.m-form-list__item--file input:focus-visible + p {
+.m-form-list__item--file-label input:focus-visible {
+  outline: 2px solid #015ECC;
+}
+
+.m-form-list__item--file .m-form-list__item-text {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: rgba(10, 17, 51, 0.6);
+}
+
+.m-form-list__item .__focus {
   border: 2px solid #015ECC;
 }
 

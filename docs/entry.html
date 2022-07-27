@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="description" content="">
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="./shared/css/style.css">
+</head>
+<body>
+    <header class="header demo">
+        <div class="header-inner">
+            <h1 class="header-logo"><a href="/dummy"><img src="../docs/shared/img/icon-common-01.png" alt="front mission"></a></h1>
+            <nav class="header-nav">
+                <ul>
+                    <li class="header-nav__item"><a href="/dummy">会社案内</a></li>
+                    <li class="header-nav__item"><a href="/dummy">選ばれる理由</a></li>
+                    <li class="header-nav__item"><a href="/dummy">事業内容</a></li>
+                    <li class="header-nav__item"><a href="/dummy">採用情報</a></li>
+                    <li class="header-nav__item header-nav__item--contact"><a href="/dummy">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /.header -->
+
+    <main class="form">
+        <section class="m-mv">
+            <div class="m-mv-inner">
+                <h1 class="m-mv-title">
+                    <span>ENTRY FORM</span>採用フォーム
+                </h1>
+            </div>
+        </section>
+        
+        <section class="form">
+            <div class="inner">
+                <p class="m-lead">弊社にご関心をお持ちいただきまして、ありがとうございます。<br>
+                    必須事項のご記入をしてから、送信下さい。</p>
+                <div class="m-form-wrap">
+                    <form  class="m-form" action="./contact-thanks.html">
+                        <div class="m-form-item">
+                            <h6 class="m-form-title">お問い合わせ種別 <span class="m-form__label">必須</span></h6>
+                            <ul class="m-form-list">
+                                <li class="m-form-list__item m-form-list__item--radio">
+                                    <input id="form-item-01" type="radio" name="item-01">
+                                    <label for="form-item-01">採用</label>
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--radio">
+                                    <input id="form-item-02" type="radio" name="item-01">
+                                    <label for="form-item-02">業務提携</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-form-item">
+                            <h6 class="m-form-title">現在の状況<span class="m-form__label">必須</span></h6>
+                            <ul class="m-form-list">
+                                <li class="m-form-list__item m-form-list__item--radio">
+                                    <input id="form-item-03" type="radio" name="item-02">
+                                    <label for="form-item-03">在職中</label>
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--radio">
+                                    <input id="form-item-04" type="radio" name="item-02">
+                                    <label for="form-item-04">離職中</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-form-item">
+                            <h6 class="m-form-title">基本情報</h6>
+                            <ul class="m-form-list">
+                                <li class="m-form-list__item m-form-list__item--text">
+                                    <label for="form-item-05">お名前<span class="m-form__label">必須</span></label>
+                                    <input id="form-item-05" type="text" name="item-03">
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--text">
+                                    <label for="form-item-06">フリガナ<span class="m-form__label">必須</span></label>
+                                    <input id="form-item-06" type="text" name="item-04">
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--email">
+                                    <label for="form-item-07">メールアドレス<span class="m-form__label">必須</span></label>
+                                    <input id="form-item-07" type="email" name="item-05">
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--email">
+                                    <label for="form-item-08">メールアドレス確認用<span class="m-form__label">必須</span></label>
+                                    <input id="form-item-08" type="email" name="item-06">
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--tel">
+                                    <label for="form-item-09">お電話番号</label>
+                                    <input id="form-item-09" type="tel" name="item-07">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-form-item">
+                            <h6 class="m-form-title">履歴書のアップロードの有無<span class="m-form__label">必須</span></h6>
+                            <ul class="m-form-list">
+                                <li class="m-form-list__item m-form-list__item--radio">
+                                    <input id="form-item-10" type="radio" name="item-08">
+                                    <label for="form-item-10">あり</label>
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--radio">
+                                    <input id="form-item-11" type="radio" name="item-08">
+                                    <label for="form-item-11">なし</label>
+                                </li>
+                                <li class="m-form-list__item m-form-list__item--file">
+                                    
+                                    <p class="m-form-list__item--file-label"><input id="form-item-12" type="file" name="item-09">
+                                        ファイルの選択</p>
+                                    <p class="m-form-list__item-text">応募書類を電子データでお持ちの場合はこちらからアップロードをお願いします。<br>
+                                        添付可能なファイルは、 PDF/ZIP 形式のファイルです。<br>
+                                        複数ファイルを添付する場合は、ZIP形式に圧縮して添付してください。</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-form-item">
+                            <ul class="m-form-list">
+                                <li class="m-form-list__item m-form-list__item--check">
+                                    <input type="checkbox" id="form-item-11" name="item-10">
+                                    <label for="form-item-13">個人情報保護方針に同意する</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-form-item">
+                            <ul class="m-form-list">
+                                <li class="m-form-list__item m-form-list__item--btn">
+                                    <input type="submit" value="送信" id="form-item-12" name="item-111">
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="m-c-btn-wrap">
+            <div class="inner">
+                <ul class="m-c-btn">
+                    <li class="m-c-btn__item"><a href="dummy">
+                        採用情報
+                        <b>RECRUIT</b>
+                    </a></li>
+                    <li class="m-c-btn__item"><a href="dummy">
+                        お問い合わせ
+                        <b>CONTACT</b>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <!-- /.company -->
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="footer-top">
+                <p class="footer-logo">
+                    <a href="">
+                        <img src="../docs/shared/img/icon-common-03.png" alt="FRONT MISSION">
+                    </a>
+                </p>
+                <nav class="footer-nav">
+                    <ul>
+                        <li class="footer-nav__item">
+                            <a href="">会社案内</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="">選ばれる理由</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="">事業内容</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="">採用情報</a>
+                        </li>
+                        <li class="footer-nav__item">
+                            <a href="">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer-info">
+                〒730-0022<br>
+                <a href="#" class="footer-info__address">広島県広島市中区銀山町3-1<br>
+                    ひろしまハイビル21・16F</a><br>
+                TEL : <span class="js-tel-01">082-535-5245</span>
+            </p>
+            <ul class="footer-sns">
+                <li class="footer-sns--facebook"><a href=""><img src="" alt=""></a></li>
+                <li class="footer-sns--twitter"><a href=""><img src="" alt=""></a></li>
+            </ul>
+            <div class="footer-bottom">
+                <p class="footer-bottom__copy">
+                    <small>©20xx 株式会社FRONT MISSION.</small>
+                </p>
+                <ul class="footer-bottom__link">
+                    <li class="footer-bottom__link--item"><a href="dummy">サイトマップ</a></li>
+                    <li class="footer-bottom__link--item"><a href="dummy">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+
+
+<!-- script -->
+    <!-- JQuery -->
+
+    <!-- script.js -->
+    <script src="./shared/js/script.js"></script>
+<!-- script end -->
+</body>
+</html>
