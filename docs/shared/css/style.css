@@ -685,6 +685,44 @@ section {
   top: 50%;
 }
 
+.m-text-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: underline;
+  -webkit-transition: -webkit-text-decoration .3s;
+  transition: -webkit-text-decoration .3s;
+  transition: text-decoration .3s;
+  transition: text-decoration .3s, -webkit-text-decoration .3s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.m-text-link::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #0A1133;
+  border-right: 1px solid #0A1133;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-left: 6px;
+  -webkit-transition: margin .3s;
+  transition: margin .3s;
+}
+
+.m-text-link:hover {
+  text-decoration: none;
+}
+
+.m-text-link:hover::after {
+  margin-left: 12px;
+}
+
 .header {
   position: relative;
   background: #fff;
@@ -1667,8 +1705,33 @@ section {
   border-bottom: 1px solid #B5B7C1;
 }
 
+.post-item__img {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.post-item__img img {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+}
+
+.post-item__img + .post-item__text {
+  margin-top: 40px;
+}
+
 .post-item__text {
-  margin-top: px;
+  margin-top: 80px;
 }
 
 .post-pagination {
@@ -1687,12 +1750,6 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.post-pagination--single > .post-pagination__item {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .post-pagination--single > .post-pagination__item a {
@@ -2012,4 +2069,18 @@ section {
 .m-form-list__item--btn > input:hover {
   background-color: #B5B7C1;
   color: #fff;
+}
+
+.thanks {
+  text-align: center;
+}
+
+.thanks-title {
+  font-size: 3.6rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.thanks-text {
+  margin-bottom: 40px;
 }

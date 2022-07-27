@@ -501,3 +501,32 @@ section{
 
     }
 }
+
+//text-link
+.m-text-link{
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    transition: text-decoration .3s;
+    justify-content: center;
+
+    &::after{
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-bottom: 1px solid $c-01;
+        border-right: 1px solid $c-01;
+        transform: rotate(-45deg);
+        margin-left: 6px;
+        transition: margin .3s;
+    }
+
+    &:hover{
+        text-decoration: none;
+        &::after{
+            margin-left: 12px;
+        }
+    }
+
+}
+

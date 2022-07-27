@@ -252,3 +252,16 @@
         }
     }
 }
+
+.thanks{
+    text-align: center;
+    &-title{
+        font-size: $fz-h1_pc;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+
+    &-text{
+        margin-bottom: 40px;
+    }
+}
