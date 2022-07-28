@@ -51,6 +51,18 @@
     &-sns{
         display: flex;
         margin-bottom: 80px;
+
+        &--facebook{
+            margin-right: 24px;
+        }
+
+        a{
+            transition: opacity .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
     }
     &-bottom{
         display: flex;

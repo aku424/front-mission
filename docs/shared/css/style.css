@@ -946,6 +946,19 @@ section {
   margin-bottom: 80px;
 }
 
+.footer-sns--facebook {
+  margin-right: 24px;
+}
+
+.footer-sns a {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.footer-sns a:hover {
+  opacity: .7;
+}
+
 .footer-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
