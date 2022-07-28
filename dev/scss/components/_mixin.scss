@@ -141,3 +141,14 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
     background-color: $c-07;
     color: $c-06;
 }
+
+%other-section{
+    padding-top: 160px;
+}
+
+%other-h1-title{
+    font-size: $fz-h1_pc;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+}

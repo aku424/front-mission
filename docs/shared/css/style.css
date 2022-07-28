@@ -121,6 +121,17 @@ img {
   color: #fff;
 }
 
+.thanks, .privacy {
+  padding-top: 160px;
+}
+
+.thanks-title, .privacy-title {
+  font-size: 3.6rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
 html {
   font-size: 10px;
 }
@@ -2094,17 +2105,67 @@ section {
   color: #fff;
 }
 
-.thanks {
-  text-align: center;
-  padding-top: 160px;
+.thanks-text {
+  margin-bottom: 40px;
 }
 
-.thanks-title {
-  font-size: 3.6rem;
-  margin-bottom: 40px;
+.privacy-title {
+  margin-bottom: 80px;
+}
+
+.privacy-title > span {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 2rem;
   font-weight: bold;
 }
 
-.thanks-text {
+.privacy-text {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  background-color: #fff;
+}
+
+.privacy-text__lead, .privacy-text__desc {
   margin-bottom: 40px;
+  font-size: 1.6rem;
+}
+
+.privacy-text__desc:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-text__desc a {
+  text-decoration: underline;
+}
+
+.privacy-text__desc a:hover {
+  text-decoration: none;
+}
+
+.privacy-text__title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.privacy-text__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.privacy-text__item::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background-color: #0A1133;
+  border-radius: 50%;
+  margin-right: 6px;
 }
