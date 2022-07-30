@@ -8,6 +8,10 @@
     &-wrap{
         padding: 80px 10%;
         background-color: $c-06;
+        
+        @include mq(sm){
+            padding: 40px 10px;
+        }
     }
 
     &-item{
@@ -38,6 +42,10 @@
         &__item{
             margin-bottom: 16px;
 
+            @include mq(sm){
+                margin-bottom: 10px;
+            }
+
             &:last-child{
                 margin-bottom: 0;
             }
@@ -57,7 +65,10 @@
                 @extend %form-area;
                 width: 50%;
                 height: 48px;
-                
+
+                @include mq(sm){
+                    width: 100%;
+                }
             }
 
             &>textarea{
@@ -69,6 +80,11 @@
 
             &>select{
                 @extend %form-area;
+                padding-right: 28px;
+                
+                @include mq(sm){
+                    padding: 8px 40px 8px 10px;
+                }
             }
             
             &--radio{
@@ -145,6 +161,10 @@
             &--old{
                 input{
                     width: calc(735px * 0.1);
+
+                    @include mq(sm){
+                        width: 60px;
+                    }
                 }
             }
 
@@ -159,6 +179,10 @@
                     border-radius: 4px;
                     padding: 4px 8px;
                     background-color: $c-06;
+                    
+                    @include mq(sm){
+                        padding: 8px 16px;
+                    }
 
                     input{
                         position: absolute;
@@ -263,6 +287,13 @@
     }
 }
 
+//ユニーク
+.entry{
+    .m-form-list__item--file{
+        margin-top: 40px;
+    }
+}
+
 .thanks{
     @extend %other-section;
 
@@ -335,6 +366,5 @@
                 margin-right: 6px;
             }
         }
-
     }
 }

@@ -2423,6 +2423,12 @@ section {
   background-color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .m-form-wrap {
+    padding: 40px 10px;
+  }
+}
+
 .m-form-item {
   margin-bottom: 40px;
 }
@@ -2453,6 +2459,12 @@ section {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 768px) {
+  .m-form-list__item {
+    margin-bottom: 10px;
+  }
+}
+
 .m-form-list__item:last-child {
   margin-bottom: 0;
 }
@@ -2476,10 +2488,26 @@ section {
   height: 48px;
 }
 
+@media screen and (max-width: 768px) {
+  .m-form-list__item > input {
+    width: 100%;
+  }
+}
+
 .m-form-list__item > textarea {
   resize: none;
   width: 100%;
   height: 160px;
+}
+
+.m-form-list__item > select {
+  padding-right: 28px;
+}
+
+@media screen and (max-width: 768px) {
+  .m-form-list__item > select {
+    padding: 8px 40px 8px 10px;
+  }
 }
 
 .m-form-list__item--radio {
@@ -2554,6 +2582,12 @@ section {
   width: calc(735px * 0.1);
 }
 
+@media screen and (max-width: 768px) {
+  .m-form-list__item--old input {
+    width: 60px;
+  }
+}
+
 .m-form-list__item--file {
   position: relative;
 }
@@ -2568,6 +2602,12 @@ section {
   border-radius: 4px;
   padding: 4px 8px;
   background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .m-form-list__item--file-label {
+    padding: 8px 16px;
+  }
 }
 
 .m-form-list__item--file-label input {
@@ -2670,6 +2710,10 @@ section {
 .m-form-list__item--btn > input:hover {
   background-color: #B5B7C1;
   color: #fff;
+}
+
+.entry .m-form-list__item--file {
+  margin-top: 40px;
 }
 
 .thanks-text {
