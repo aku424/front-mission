@@ -8,9 +8,17 @@
     &-contents{
         display: flex;
         margin-bottom: 80px;
+
+        @include mq(sm){
+            flex-direction: column;
+        }
     }
     &__img{
         flex: 40% 1 1;
+
+        @include mq(sm){
+            flex: 100% 1 1;
+        }
 
         &--img{
             margin: 0 0 16px 0;
@@ -36,8 +44,17 @@
         padding-top: 24px;
         padding-left: 24px;
 
+        @include mq(sm){
+            padding-left: 0;
+            padding-top: 40px;
+        }
+
         &--text{
             margin-bottom: 65px;
+
+            @include mq(sm){
+                margin-bottom: 100px;
+            }
         }
     }
 
@@ -71,9 +88,17 @@
         &__contents{
             padding: 40px 16px 0;
 
+            @include mq(sm){
+                padding: 40px 0 0;
+            }
+
             &-item{
                 display: flex;
                 margin-bottom: 24px;
+
+                @include mq(sm){
+                    flex-direction: column;
+                }
 
                 &:last-child{
                     margin-bottom: 0;
@@ -85,12 +110,30 @@
     }
 }
 %company-dl{
+    dt,
+    dd,
+    dd time{
+        font-size: $fz-txt_01;
+    }
+    
     dt{
         flex: 25% 1 1;
     }
 
     dd{
         flex: 75% 1 1;
+    }
+    
+    @include mq(sm){
+        flex-direction: column;
+        dt,
+        dd{
+            flex: 100% 1 1;
+        }
+
+        dt{
+            font-size: $fz-txt_09;
+        }
     }
 }
 
@@ -102,6 +145,10 @@
             padding: 0 24px 24px;
             margin-bottom: 24px;
             border-bottom: 1px solid #B0B2BB;
+            
+            @include mq(sm){
+                padding: 0 10px 24px;
+            }
 
             &:last-child{
                 margin-bottom: 0;
