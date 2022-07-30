@@ -21,7 +21,12 @@
             &:last-child{
                 margin-bottom: 0;
             }
-
+            
+            &__wrap{
+                @include mq(sm){
+                    padding: 0 10px;
+                }
+            }
 
             &--odd{
                 flex-direction: row-reverse;
@@ -44,6 +49,14 @@
                 overflow: hidden;
                 margin-left: -100px;
 
+                @include mq(sm){
+                    max-width: none;
+                    max-height: none;
+                    width: calc(100vw - 20px);
+                    height: calc(100vw - 20px);
+                    margin-left: 0;
+                }
+
                 img{
                     height: 100%;
                     width: auto;
@@ -51,10 +64,23 @@
             }
 
             &__box{
-                background-color: rgba($color: $c-06, $alpha: .8);
+                background-color: rgba($c-06, .8);
                 margin-top: 40px;
                 padding: 80px 140px;
                 max-width: 67.57vw;
+                
+                @include mq(sm){
+                    width: 100%;
+                    max-width: none;
+                    background-color: rgba($c-06, .5);
+                    padding: 40px 10px;
+                    margin-top: 0px;
+                }
+            }
+
+            @include mq(sm){
+                flex-direction: column-reverse;
+                margin-bottom: 120px;
             }
         }
     }
