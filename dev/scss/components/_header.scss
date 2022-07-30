@@ -52,11 +52,16 @@
     }
     
     &-nav{
+        margin-right: 0;
         @media screen and (min-width:1366px) {
             margin-right: -100px;
             
         }
-        margin-right: 0;
+
+        @include mq(sm){
+            display: none;
+        }
+        
         ul{
             display: flex;
             height: 100%;

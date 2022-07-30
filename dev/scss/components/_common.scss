@@ -26,6 +26,14 @@ a{
 
 section{
     margin-bottom: 160px;
+
+    @include mq(sm){
+        margin-bottom: 120px;
+    }
+}
+
+.new_line{
+    display: inline-block;
 }
 
 //mv
@@ -54,7 +62,7 @@ section{
         background-color: $c-03;
         color: $c-06;
         width: 460px;
-        font-size: $fz-txt_01_pc;
+        font-size: $fz-txt_01;
         font-weight: bold;
         margin-top: 100px;
         border-radius: 8px;
@@ -164,6 +172,12 @@ section{
         display: flex;
         justify-content: center;
         gap: 24px;
+
+        @include mq(sm){
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
     }
 
     //borderのホバー時の動き
@@ -378,18 +392,18 @@ section{
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        font-size: $fz-txt_01_pc;
+        font-size: $fz-txt_01;
         color: $c-06;
         
         b{
-            font-size: $fz-txt_02_pc;
+            font-size: $fz-txt_02;
             font-weight: bold;
             display: block;
             width: fit-content;
             color: $c-06;
             
             &>span{
-                font-size: $fz-txt_03_pc;
+                font-size: $fz-txt_03;
                 color: $c-06;
             }
         }
@@ -399,6 +413,11 @@ section{
 
 //lyt
 .m-lyt-01{
+    width: calc(100vw - ((100vw - 960px) / 2));
+    display: grid;
+    grid-template-columns: 50vw calc((100% - 50vw) / 2) auto;
+    grid-template-rows: 80px auto 24px;
+
     @media screen and (max-width: 1366px){
         width: calc(100vw - ((100vw - 960px) / 2));
     }
@@ -407,10 +426,10 @@ section{
         width: 100vw;
         grid-template-columns: 50vw 1fr 1fr;
     }
-    width: calc(100vw - ((100vw - 960px) / 2));
-    display: grid;
-    grid-template-columns: 50vw calc((100% - 50vw) / 2) auto;
-    grid-template-rows: 80px auto 24px;
+
+    @include mq(sm){
+        display: block;
+    }
 
     &__box{
         position: relative;
@@ -421,6 +440,17 @@ section{
         
         @media screen and (max-width:980px){
             padding: 40px 264px 96px 60px;
+        }
+
+        @include mq(sm){
+            .m-more-btn{
+                margin: 0 auto;
+            }   
+        }
+
+
+        @include mq(sm){
+            padding: 40px 10px 80px;
         }
     }
     
@@ -441,6 +471,10 @@ section{
     }
 
     &:nth-child(odd){
+        @media screen and (max-width:960px) {
+            width: 100vw;
+            grid-template-columns: 50vw 1fr 1fr;
+        }
         .m-span-title{
             left:calc(((100vw - 960px) / 2) - 20px);
             top: 45%;
@@ -456,6 +490,11 @@ section{
         grid-template-rows: 24px auto 80px;
         margin-left: auto;
 
+        @media screen and (max-width:960px) {
+            width: 100vw;
+            grid-template-columns: 1fr 1fr 50vw;
+        }
+
         .m-lyt-01{
             &__img{
                 grid-column: 1/3;
@@ -469,6 +508,10 @@ section{
 
                 @media screen and (max-width:980px){
                     padding: 40px 60px 96px 264px;
+                }
+
+                @include mq(sm){
+                    padding: 40px 10px 80px;
                 }
 
                 .m-span-title{
@@ -493,6 +536,10 @@ section{
     font-size: $fz-tag;
     transform: rotate(90deg);
     display: inline-block;
+    
+    @include mq(sm){
+        display: none;
+    }
     
     &::before{
         position: absolute;

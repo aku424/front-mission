@@ -15,7 +15,7 @@
     }
 
     &-title{
-        font-size: $fz-txt_04_pc;
+        font-size: $fz-txt_04;
         border-bottom: 2px solid $c-10;
         margin-bottom: 16px;
     }
@@ -176,7 +176,7 @@
 
                 .m-form-list__item-text{
                     margin-top: 8px;
-                    font-size: $fz-txt_07_pc;
+                    font-size: $fz-txt_07;
                     color: rgba($c-01, .6);
                 }
             }
@@ -286,7 +286,7 @@
             display: block;
             width: fit-content;
             margin: 0 auto;
-            font-size: $fz-txt_01_pc;
+            font-size: $fz-txt_01;
             font-weight: bold;
         }
     }
@@ -318,7 +318,7 @@
         }
 
         &__title{
-            font-size: $fz-txt_01_pc;
+            font-size: $fz-txt_01;
             margin-bottom: 16px;
         }
 

@@ -2,6 +2,7 @@ $breakpoints: (
 //キー  値
     'xs': 'screen and (max-width: 376px)',
     'sm': 'screen and (max-width: 768px)', //767px以下（スマホ）用の表示
+    'osm': 'screen and (min-width: 768px)', //768px以上（スマホ）用の表示
     'md': 'screen and (max-width: 1025px)', //1024px以上（タブレット・PC）用の表示
     'xl': 'screen and (min-width: 1026px)'
 
@@ -47,13 +48,14 @@ $fz-h2_pc: 2.8rem;
 $fz-h2_pc--sub: 4.8rem;
 $fz-c-btn: 3.6rem;
 $fz-h3_pc: 2.8rem;
-$fz-txt_01_pc: 2.0rem;
-$fz-txt_02_pc: 2.8rem;
-$fz-txt_03_pc: 4.0rem;
-$fz-txt_04_pc: 2.4rem;
-$fz-txt_05_pc: 3.6rem;
-$fz-txt_06_pc: 1.4rem;
-$fz-txt_07_pc: 1.2rem;
+$fz-txt_01: 2.0rem;
+$fz-txt_02: 2.8rem;
+$fz-txt_03: 4.0rem;
+$fz-txt_04: 2.4rem;
+$fz-txt_05: 3.6rem;
+$fz-txt_06: 1.4rem;
+$fz-txt_07: 1.2rem;
+$fz-txt_08: 3.2rem;
 $fz-base_pc: 1.6rem;
 $fz-tag: 1.2rem;
 $fz-reason--sub: 1.2rem;
@@ -104,7 +106,7 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
 
     &>span{
         display: block;
-        font-size: $fz-txt_01_pc;
+        font-size: $fz-txt_01;
     }
 
     &>b{
@@ -125,7 +127,7 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
             border-radius: 8px;
             border: 1px solid $c-10;
             color: $c-10;
-            font-size: $fz-txt_06_pc;
+            font-size: $fz-txt_06;
             font-weight: bold;
             transition: background .3s, color .3s border .3s;
 
