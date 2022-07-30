@@ -632,13 +632,13 @@ section{
         border-right: 1px solid $c-01;
         transform: rotate(-45deg);
         margin-left: 6px;
-        transition: margin .3s;
+        transition: transform .3s;
     }
 
     &:hover{
         text-decoration: none;
         &::after{
-            margin-left: 12px;
+            transform: rotate(-45deg) translate(5px, 5px);
         }
     }
 

@@ -150,7 +150,11 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
 }
 
 %other-section{
-    padding-top: 160px;
+    margin-top: 160px;
+
+    @include mq(sm){
+        margin-top: 120px;
+    }
 }
 
 %other-h1-title{
@@ -158,4 +162,12 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
     margin-bottom: 40px;
     font-weight: bold;
     text-align: center;
+
+    span{
+        font-weight: bold;
+    }
+
+    @include mq(sm){
+        font-size: $fz-txt_01;
+    }
 }

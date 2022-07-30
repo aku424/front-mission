@@ -128,7 +128,13 @@ img {
 }
 
 .thanks, .privacy {
-  padding-top: 160px;
+  margin-top: 160px;
+}
+
+@media screen and (max-width: 768px) {
+  .thanks, .privacy {
+    margin-top: 120px;
+  }
 }
 
 .thanks-title, .privacy-title {
@@ -136,6 +142,16 @@ img {
   margin-bottom: 40px;
   font-weight: bold;
   text-align: center;
+}
+
+.thanks-title span, .privacy-title span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .thanks-title, .privacy-title {
+    font-size: 2rem;
+  }
 }
 
 html {
@@ -890,8 +906,10 @@ section {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   margin-left: 6px;
-  -webkit-transition: margin .3s;
-  transition: margin .3s;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .m-text-link:hover {
@@ -899,7 +917,8 @@ section {
 }
 
 .m-text-link:hover::after {
-  margin-left: 12px;
+  -webkit-transform: rotate(-45deg) translate(5px, 5px);
+          transform: rotate(-45deg) translate(5px, 5px);
 }
 
 .header {
@@ -2718,10 +2737,17 @@ section {
 
 .thanks-text {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .privacy-title {
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .privacy-title {
+    margin-bottom: 40px;
+  }
 }
 
 .privacy-title > span {
@@ -2741,6 +2767,12 @@ section {
   background-color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .privacy-text {
+    padding: 40px 8px;
+  }
+}
+
 .privacy-text__lead, .privacy-text__desc {
   margin-bottom: 40px;
   font-size: 1.6rem;
@@ -2751,6 +2783,7 @@ section {
 }
 
 .privacy-text__desc a {
+  display: inline-block;
   text-decoration: underline;
 }
 

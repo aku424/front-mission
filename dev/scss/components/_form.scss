@@ -303,6 +303,7 @@
     
     &-text{
         margin-bottom: 40px;
+        text-align: center;
     }
 }
 
@@ -312,6 +313,10 @@
     &-title{
         @extend %other-h1-title;
         margin-bottom: 80px;
+
+        @include mq(sm){
+            margin-bottom: 40px;
+        }
 
         >span{
             display: block;
@@ -328,6 +333,10 @@
         padding: 80px 48px;
         background-color: $c-06;
 
+        @include mq(sm){
+            padding: 40px 8px;
+        }
+
         &__lead,
         &__desc{
             margin-bottom: 40px;
@@ -340,6 +349,7 @@
             }
 
             a{
+                display: inline-block;
                 text-decoration: underline;
 
                 &:hover{
