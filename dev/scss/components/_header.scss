@@ -1,29 +1,40 @@
 .header{
-    position: relative;
     background: $c-06;
     box-sizing: content-box;
     margin: 0 auto;
     z-index: 999;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: all .5s;
+    
     
     &-top{
-        background-color: rgba($color: $c-06, $alpha: 0);
-        .header{
-            &-inner{
-                background-color: inherit;
-            }
+        @include mq(osm){
+            background-color: rgba($color: $c-06, $alpha: 0);
             
-            &-nav{
-                &__item{
-                    a{
-                        color: $c-06;
-                        &::before{
-                            background-color: $c-06;
+            .header{
+                &-inner{
+                    background-color: inherit;
+                }
+                
+                &-nav{
+                    &__item{
+                        a{
+                            color: $c-06;
+                            &::before{
+                                background-color: $c-06;
+                            }
                         }
                     }
                 }
             }
         }
+
     }
+
     &-inner{
         display: flex;
         justify-content: space-between;
@@ -31,16 +42,28 @@
         margin-left: auto;
         padding-left: 20px;
         box-sizing: content-box;
+        align-items: center;
         @extend %w-01;
 
         @media screen and (min-width:1366px) {
-            // padding-left: 20px;
             margin: 0 auto;
+        }
+
+        @include mq(sm){
+            width: 100%;
+            margin-left: 0;
+            box-sizing: border-box;
+            padding: 10px 20px;
         }
     }
     &-logo{
+        z-index: 1;
         @media screen and (min-width:1366px) {
             margin-left: 92px;
+        }
+
+        @include mq(sm){
+            width: 60px;
         }
 
         a{
@@ -50,22 +73,79 @@
             }
         }
     }
+
+    %btn-bar{
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 3px;
+        border-radius: 1.5px;
+        background-color: $c-03;
+        transition: transform .3s, background-color .3s;
+        left: 0;
+    }
+
+    &-btn{
+        @include mq(osm){
+            display: none;
+        }
+
+        position: relative;
+        border: none;
+        background-color: inherit;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        z-index: 1;
+        
+        &::after,
+        &::before{
+            @extend %btn-bar;
+        }
+
+        span{
+            position: relative;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-indent: 100%;
+
+            &::before{
+                @extend %btn-bar;
+                transition: opacity .3s;
+                top: 50%;
+            }
+        }
+    }
     
     &-nav{
+        display: block;
+        height: 100%;
         margin-right: 0;
+        transition: transform .3s;
         @media screen and (min-width:1366px) {
             margin-right: -100px;
-            
         }
 
         @include mq(sm){
-            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 70vw;
+            height: 100vh;
+            transform: translateX(100%);
+            background-color: $c-13;
         }
         
         ul{
             display: flex;
             height: 100%;
             align-items: center;
+
+            @include mq(sm){
+                flex-direction: column;
+                padding: 100px 10px 0;
+            }
         }
 
         &__item{
@@ -73,6 +153,13 @@
             height: 100%;
             margin-left: 20px;
             align-items: center;
+
+            @include mq(sm){
+                height: 53px;
+                width: 100%;
+                margin-left: 0;
+                justify-content: center;
+            }
             
             &:first-child{
                 margin-left: 0;
@@ -83,6 +170,12 @@
                 padding: 4px;
                 font-size: $fz-base_pc;
                 position: relative;
+                text-align: center;
+
+                @include mq(sm){
+                    width: fit-content;
+                    color: $c-06;
+                }
 
                 &::before{
                     position: absolute;
@@ -105,14 +198,27 @@
 
             &--contact{
                 display: block;
+
+                @include mq(sm){
+                    display: flex;
+                    width: 100%;
+                }
+
                 a{
                     display: flex;
                     align-items: center;
                     border-radius: 8px;
                     height: 100%;
-                    padding: 0 20px;
+                    padding: 21px;
                     background-color: $c-05;
                     color: $c-06;
+                    
+                    @include mq(sm){
+                        width: 100%;
+                        justify-content: center;
+                        padding: 0 20px;
+                    }
+
                     &::before{
                         display: none;
                     }
@@ -125,5 +231,36 @@
                 }
             }
         }
+    }
+
+    &--open{
+        .header-btn{
+            &::after,
+            &::before{
+                top: 50%;
+                background-color: $c-06;
+            }
+
+            &::after{
+                transform: rotate(-135deg);
+            }
+            
+            &::before{
+                transform: rotate(135deg);
+            }
+
+            span{
+                opacity: 0;
+            }
+        }
+
+        .header-nav{
+            transform: translateX(0%);
+        }
+    }
+
+    &--visible{
+        background-color: $c-06;
+        position: fixed;
     }
 }

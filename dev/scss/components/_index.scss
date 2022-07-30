@@ -1,5 +1,6 @@
 .index{
     margin-top: -80px;
+    padding-top: 0;
 
 .mv{
     position: relative;
@@ -8,10 +9,10 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 56.25vw;
+    height: calc(56.25vw + 70px);
 
     @include mq(sm){
-        height: 553px;
+        height: 623px;
         background-position: 70% 0; 
         margin-bottom: 200px;
     }
