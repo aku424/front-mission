@@ -6,9 +6,14 @@
     .invite{
         display: grid;
         width: 100vw;
-        height: calc((644 / 1366) * 100vw);
+        height: fit-content;
         grid-template-columns: 32% 37% 31%;
-        grid-template-rows: 18.63% 57.17% 24.22%;
+        grid-template-rows: 80px auto 80px;
+        
+        @include mq(sm){
+            grid-template-columns: 10px auto 10px;
+            grid-template-rows: auto 100px auto;
+        }
 
         &__box{
             grid-column: 2/4;
@@ -18,10 +23,28 @@
             text-align: center;
             z-index: 1;
 
-            &--title{  
+            @include mq(sm){
+                grid-column: 2/-2;
+                grid-row: 2/-1;
+                padding: 40px 8px;
+                text-align-last: left ;
+            }
+            
+            &--title{
                 font-size: $fz-h2_pc;
-                font-weight: bold;
                 margin-bottom: 36px;
+
+                br{
+                    &:first-child{
+                        @include mq(osm){
+                            display: none;
+                        }
+                    }
+                }
+                
+                @include mq(sm){
+                    font-size: $fz-txt_04;
+                }
             }
 
             &--text{
@@ -36,6 +59,12 @@
         &__img{
             grid-column: 1/3;
             grid-row: 1/3;
+            
+            @include mq(sm){
+                grid-column: 1/-1;
+                grid-row: 1/3;
+                
+            }
         }
     }
 
@@ -43,12 +72,30 @@
         &-lyt{
             display: flex;
 
+            @include mq(sm){
+                flex-direction: column;
+                margin-bottom: 80px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
             &:nth-child(even){
                 flex-direction: row-reverse;
+
+                @include mq(sm){
+                    flex-direction: column;
+                }
                 
                 .feature-lyt__text--non{
                     left: 100%;
                     transform: translateX(-100%);
+                    
+                    @include mq(sm){
+                        left: 0;
+                        transform: translateX(0);
+                    }
                 }
             }
 
@@ -64,6 +111,10 @@
                 flex-direction: column;
                 justify-content: center;
 
+                @include mq(sm){
+                    padding: 90px 0px 24px;
+                }
+
                 &--non{
                     position: absolute;
                     top: 0;
@@ -77,6 +128,10 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     display: block;
+
+                    @include mq(sm){
+                        font-size: 80px;
+                    }
                 }
 
                 &--title{
@@ -86,6 +141,11 @@
 
             &__img{
                 @extend %feature-item;
+
+                @include mq(sm){
+                    width: 50vw;
+                    margin-left: auto;
+                }
 
                 img{
                     object-fit: cover;
@@ -104,30 +164,53 @@
                 }
             }
 
+            @include mq(sm){
+                margin-top: 120px;
+            }
             
             &-wrap{
                 overflow: hidden;
                 width: 100vw;
                 display: flex;
                 margin-right: 48px;
+
+                @include mq(sm){
+                    margin-right: 16px;
+                }
             }
 
             display: flex;
             height: calc((324 / 1366) * 100vw);
             width: fit-content;
-            animation:feature-slide 15s linear infinite;
+            animation:feature-slide 30s linear infinite;
+            
+            @include mq(sm){
+                height: calc((117 / 375) * 100vw);
+                animation:feature-slide 35s linear infinite;
+            }
 
             &__img{
                 width: calc((432 / 1366) * 100vw);
                 margin-right: 48px;
+                
+                @include mq(sm){
+                    width: calc((157 / 375) * 100vw);
+                    margin-right: 16px;
+                }
             }
         }
     }
 
     .job-desc{
         &-list{
-            background-color: $c-06;
-            padding: 80px 20px;
+            &-wrap{
+                background-color: $c-06;
+                padding: 80px 20px;
+                
+                @include mq(sm){
+                    padding: 40px 10px;
+                }
+            }
         }
 
         &-item{
@@ -139,6 +222,11 @@
             padding-bottom: 16px;
             padding-left: 24px;
             margin-bottom: 16px;
+
+            @include mq(sm){
+                width: 100%;
+                padding-left: 0;
+            }
             
             &:last-child{
                 margin-bottom: 0;
@@ -147,12 +235,12 @@
             }
 
             &__term{
-                flex: 38% 1 1;
+                flex: 35% 1 1;
 
             }
             
             &__desc{
-                flex: 62% 1 1;
+                flex: 65% 1 1;
             }
         }
     }

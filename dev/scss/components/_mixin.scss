@@ -85,6 +85,10 @@ $ff: 'Zen Kaku Gothic New', "Meiryo", sans-serif;
     margin-bottom: 40px;
     font-size: $fz-h3_pc;
 
+    @include mq(sm){
+        font-size: $fz-txt_01;
+    }
+
     &::before{
         position: absolute;
         content: "";
