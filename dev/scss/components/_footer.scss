@@ -11,10 +11,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
-    }
 
-    &-logo{
-
+        @include mq(sm){
+            display: none;
+        }
     }
 
     &-nav{
@@ -40,6 +40,11 @@
 
     &-info{
         margin-bottom: 20px;
+
+        @include mq(sm){
+            display: none;
+        }
+
         &__address{
             &:hover{
                 opacity: .7s;
@@ -51,6 +56,11 @@
     &-sns{
         display: flex;
         margin-bottom: 80px;
+
+        @include mq(sm){
+            justify-content: center;
+            margin-bottom: 40px;
+        }
 
         &--facebook{
             margin-right: 24px;
@@ -68,6 +78,10 @@
         display: flex;
         justify-content: space-between;
 
+        @include mq(sm){
+            justify-content: center;
+        }
+
         &__copy{
             small{
                 font-size: $fz-tag;
@@ -75,7 +89,12 @@
             }
         }
 
-        &__link{            
+        &__link{    
+            
+            @include mq(sm){
+                display: none;
+            }
+
             &--item{
                 font-size: $fz-tag;
                 transition: opacity .3s;

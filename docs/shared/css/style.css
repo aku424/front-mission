@@ -161,6 +161,12 @@ a {
   padding: 0 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .inner {
+    padding: 0 10px;
+  }
+}
+
 section {
   margin-bottom: 160px;
 }
@@ -662,6 +668,11 @@ section {
 
 .m-lyt-01__title {
   text-align-last: left;
+  font-size: 3.6rem;
+}
+
+.m-lyt-01__title b {
+  font-size: 3.6rem;
 }
 
 .m-lyt-01__text {
@@ -984,6 +995,12 @@ section {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-top {
+    display: none;
+  }
+}
+
 .footer-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1010,6 +1027,12 @@ section {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-info {
+    display: none;
+  }
+}
+
 .footer-info__address:hover {
   opacity: .7s;
 }
@@ -1019,6 +1042,15 @@ section {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-sns {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+  }
 }
 
 .footer-sns--facebook {
@@ -1043,8 +1075,22 @@ section {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer-bottom__copy small {
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-bottom__link {
+    display: none;
+  }
 }
 
 .footer-bottom__link--item {
@@ -1074,7 +1120,8 @@ section {
 @media screen and (max-width: 768px) {
   .index .mv {
     height: 553px;
-    background-position: 80% 0;
+    background-position: 70% 0;
+    margin-bottom: 200px;
   }
 }
 
@@ -1270,6 +1317,12 @@ section {
   left: 50%;
 }
 
+@media screen and (max-width: 768px) {
+  .index .lead::before {
+    display: none;
+  }
+}
+
 .index .lead-title {
   text-align: center;
   font-size: 2.8rem;
@@ -1299,7 +1352,8 @@ section {
 }
 
 .index .recruit .m-h2-ttl,
-.index .recruit .m-h2-ttl span, .index .recruit-text {
+.index .recruit .m-h2-ttl span,
+.index .recruit-text span, .index .recruit-text {
   color: #fff;
 }
 
@@ -1343,6 +1397,11 @@ section {
 
 .index .contact .m-h2-ttl {
   text-align-last: left;
+  font-size: 3.6rem;
+}
+
+.index .contact .m-h2-ttl b {
+  font-size: 3.6rem;
 }
 
 .index .contact-box {

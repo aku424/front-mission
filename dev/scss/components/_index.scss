@@ -12,7 +12,8 @@
 
     @include mq(sm){
         height: 553px;
-        background-position: 80% 0; 
+        background-position: 70% 0; 
+        margin-bottom: 200px;
     }
 
     .inner{
@@ -21,14 +22,11 @@
     }
 
     &-text{
-        // @include mq(osm){
             position: absolute;
             bottom: 160px;
             left: 20px;
-        // }
 
         @include mq(sm){
-            // position: relative;
             bottom: 40px;
 
         }
@@ -56,8 +54,7 @@
     }
 
     &-news{
-        
-        @include mq(osm){
+            @include mq(osm){
             position: absolute;
             transform: translateY(50%);
             right: 0;
@@ -178,6 +175,10 @@
         background-size: cover;
         top: -48px;
         left: 50%;
+
+        @include mq(sm){
+            display: none;
+        }
     }
     &-title{
         text-align: center;
@@ -209,6 +210,7 @@
 
     .m-h2-ttl,
     .m-h2-ttl span,
+    &-text span,
     &-text{
         color: $c-06;
     }
@@ -261,6 +263,11 @@
 
     .m-h2-ttl{
         text-align-last: left;
+        font-size: $fz-h1_pc;
+        
+        b{
+            font-size: $fz-h1_pc;
+        }
     }
 
     &-box{

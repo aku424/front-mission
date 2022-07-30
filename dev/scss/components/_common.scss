@@ -22,6 +22,10 @@ a{
     max-width: 960px;
     margin: auto;
     padding: 0 20px;
+
+    @include mq(sm){
+        padding: 0 10px;
+    }
 }
 
 section{
@@ -464,6 +468,12 @@ section{
     &__title{
         @extend %m-h2-ttl;
         text-align-last: left;
+        font-size: $fz-h1_pc;
+        
+        
+        b{
+            font-size: $fz-h1_pc;
+        }
     }
 
     &__text{
