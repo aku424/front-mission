@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./docs/shared/img/favicon.ico" type="image/x-icon">
     <!-- style -->
     <link rel="stylesheet" href="./shared/css/style.css">
 </head>
@@ -48,70 +50,122 @@
                 </h2>
                 <p class="m-lead"><span class="new_line">手探りの状態でも、</span><span class="new_line">プロジェクトの問題・課題を整理し、</span><br>
                     <span class="new_line">具体的なアクションへと</span><span class="new_line">繋げるサポートを致します。</span><br>
-                    <span class="new_line">プロジェクトを成功へと導くため、</span><span class="new_line">お客様と同様の使命感を持って</span><span class="new_line">設計に臨みます。</span></p>
-                    <ul class="reason-item__wrap">
-                        <li class="reason-item reason-item--odd">
-                            <div class="reason-item__box">
-                                <h3 class="m-h3-ttl--01">
-                                    <span>Reason 01</span>
-                                    3D設計
-                                </h3>
-                                <p class="reason-item__text">設計情報を3Dに視覚化することで、関係者との意思疎通を円滑化します。<br>
-                                    関係者は、細かな図面情報を読み解くことなく、視覚を通して製品の理解を深めることができます。</p>
-                            </div>
-                            <div class="reason-item__img">
-                                <img src="../docs/shared/img/mv-common-01.png" alt="">
-                            </div>
-                        </li>
-                        <li class="reason-item reason-item--even">
-                            <div class="reason-item__box">
-                                <h3 class="m-h3-ttl--01">
-                                    <span>Reason 02</span>
-                                    ユニークな知見
-                                </h3>
-                                <p class="reason-item__text">船舶海洋部門の知識に加え、鋼構造・構造設計の知見を兼ね備えた設計チームです。<br>
-                                    全く先の見えない案件においても、問題点を洗い出しながら、プロジェクトの前進に貢献します。</p>
-                            </div>
-                            <div class="reason-item__img">
-                                <img src="../docs/shared/img/mv-common-01.png" alt="">
-                            </div>
-                        </li>
-                        <li class="reason-item reason-item--odd">
-                            <div class="reason-item__box">
-                                <h3 class="m-h3-ttl--01">
-                                    <span>Reason 03</span>
-                                    特殊案件の対応
-                                </h3>
-                                <p class="reason-item__text">どこに依頼してよいかわからないような、特殊な案件についても、親身に対応させて頂きます。<br>
-                                    <ul>
-                                        <li>・水上モニュメント浮体部に係る設計</li>
-                                        <li>・洋上風力発電浮体部の概略設計</li>
-                                    </ul>
-                                    などに尽力させていただきました。</p>
-                            </div>
-                            <div class="reason-item__img">
-                                <img src="../docs/shared/img/mv-common-01.png" alt="">
-                            </div>
-                        </li>
-                        <li class="reason-item reason-item--even">
-                            <div class="reason-item__box">
-                                <h3 class="m-h3-ttl--01">
-                                    <span>Reason 04</span>
-                                    コンサルティング
-                                </h3>
-                                <p class="reason-item__text">どう進めて良いか分からない未知数で抽象的な案件に対しこんな事をやりたい、という想いを具体化するサポートをいたします。<br>
-                                    現在は、主に下記の活動をサポートしております。
-                                    <ul>
-                                        <li>・病院船プロジェクト</li>
-                                    </ul>
-                                    まずはお気軽にご相談ください。</p>
-                            </div>
-                            <div class="reason-item__img">
-                                <img src="../docs/shared/img/mv-common-01.png" alt="">
-                            </div>
-                        </li>
-                    </ul>
+                    <span class="new_line">プロジェクトを成功へと導くため、</span><span class="new_line">お客様と同様の使命感を持って</span><span class="new_line">設計に臨みます。</span>
+                </p>
+                <ul class="reason-item__wrap">
+                    <li class="reason-item reason-item--odd">
+                        <div class="reason-item__box">
+                            <h3 class="m-h3-ttl--01">
+                                <span>Reason 01</span>
+                                3D設計
+                            </h3>
+                            <p class="reason-item__text">設計情報を3Dに視覚化することで、関係者との意思疎通を円滑化します。<br>
+                                関係者は、細かな図面情報を読み解くことなく、視覚を通して製品の理解を深めることができます。</p>
+                        </div>
+                        <div class="reason-item__img">
+                            <img src="../docs/shared/img/mv-common-01.png" alt="">
+                        </div>
+                    </li>
+                    <li class="reason-item reason-item--even">
+                        <div class="reason-item__box">
+                            <h3 class="m-h3-ttl--01">
+                                <span>Reason 02</span>
+                                ユニークな知見
+                            </h3>
+                            <p class="reason-item__text">船舶海洋部門の知識に加え、鋼構造・構造設計の知見を兼ね備えた設計チームです。<br>
+                                全く先の見えない案件においても、問題点を洗い出しながら、プロジェクトの前進に貢献します。</p>
+                        </div>
+                        <div class="reason-item__img">
+                            <img src="../docs/shared/img/mv-common-01.png" alt="">
+                        </div>
+                    </li>
+                    <li class="reason-item reason-item--odd">
+                        <div class="reason-item__box">
+                            <h3 class="m-h3-ttl--01">
+                                <span>Reason 03</span>
+                                特殊案件の対応
+                            </h3>
+                            <p class="reason-item__text">どこに依頼してよいかわからないような、特殊な案件についても、親身に対応させて頂きます。<br>
+                                <ul>
+                                    <li>・水上モニュメント浮体部に係る設計</li>
+                                    <li>・洋上風力発電浮体部の概略設計</li>
+                                </ul>
+                                などに尽力させていただきました。</p>
+                        </div>
+                        <div class="reason-item__img">
+                            <img src="../docs/shared/img/mv-common-01.png" alt="">
+                        </div>
+                    </li>
+                    <li class="reason-item reason-item--even">
+                        <div class="reason-item__box">
+                            <h3 class="m-h3-ttl--01">
+                                <span>Reason 04</span>
+                                コンサルティング
+                            </h3>
+                            <p class="reason-item__text">どう進めて良いか分からない未知数で抽象的な案件に対しこんな事をやりたい、という想いを具体化するサポートをいたします。<br>
+                                現在は、主に下記の活動をサポートしております。
+                                <ul>
+                                    <li>・病院船プロジェクト</li>
+                                </ul>
+                                まずはお気軽にご相談ください。</p>
+                        </div>
+                        <div class="reason-item__img">
+                            <img src="../docs/shared/img/mv-common-01.png" alt="">
+                        </div>
+                    </li>
+                </ul>
         </section>
+
+        <section class="review">
+            <div class="inner">
+                <h2 class="m-h2-ttl">
+                    <span>お客様の声</span>
+                    <b>R</b>EVIEW
+                </h2>
+                <div class="review-slide-wrap">
+                    <div class="swiper">
+                        <ul class="review-slide swiper-wrapper">
+                            <il class="review-item swiper-slide">
+                                <a href="">
+                                    <div class="review-item__img">
+                                        <img src="../docs/shared/img/mv-review-01.png" alt="">
+                                    </div>
+                                    <div class="review-item__text">
+                                        <h3 class="review-item__text--title">xxx株式会社</h3>
+                                        <p class="review-item__text--text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                    </div>
+                                </a>
+                            </il>
+                            <il class="review-item swiper-slide">
+                                <a href="">
+                                    <div class="review-item__img">
+                                        <img src="../docs/shared/img/mv-review-01.png" alt="">
+                                    </div>
+                                    <div class="review-item__text">
+                                        <h3 class="review-item__text--title">xxx株式会社</h3>
+                                        <p class="review-item__text--text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                    </div>
+                                </a>
+                            </il>
+                            <il class="review-item swiper-slide">
+                                <a href="">
+                                    <div class="review-item__img">
+                                        <img src="../docs/shared/img/mv-review-01.png" alt="">
+                                    </div>
+                                    <div class="review-item__text">
+                                        <h3 class="review-item__text--title">xxx株式会社</h3>
+                                        <p class="review-item__text--text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                    </div>
+                                </a>
+                            </il>
+                        </ul>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
         <section class="m-c-btn-wrap">
             <div class="inner">
                 <ul class="m-c-btn">
@@ -184,10 +238,10 @@
 
 
 <!-- script -->
-    <!-- JQuery -->
-
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- script.js -->
-    <script src="./shared/js/script.js"></script>
+    <script src="./shared/js/slide.js"></script>
 <!-- script end -->
 </body>
 </html>

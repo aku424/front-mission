@@ -5,16 +5,14 @@ var mv_height = mv.clientHeight;
 
 window.addEventListener("scroll", function() {
     var window_height = window.scrollY;
-    var visible_header_height = mv_height + 80;
+    var visible_header_height = mv_height* 2;
 
     if (window_height > visible_header_height) {
         header.classList.add(visible);
         header.classList.remove(header_top);
-        console.log("固定");
     }else{
         header.classList.remove(visible);
         header.classList.add(header_top);
-        console.log("どっかいく");
     }
 })
 
