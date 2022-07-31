@@ -105,15 +105,39 @@
             position: absolute;
             top: 100%;
             bottom: 0;
+            &::after{
+                content: ""; 
+                width: 32px;
+                height: 32px;
+
+                &:hover{
+                }
+            }
         }
 
         .swiper-button-prev{
             left: auto;
             right: 60px;
+
+            @include mq(sm){
+                right: calc(50% + 40px);
+            }
+            
+            &::after{
+                content: url(../../../docs/shared/img/icon-strength-01.png);
+            }
         }
         
         .swiper-button-next{
             right: 0px;
+
+            @include mq(sm){
+                right: calc(50% - 40px);
+            }
+            
+            &::after{
+                content: url(../../../docs/shared/img/icon-strength-02.png);
+            }
         }
     }
 }

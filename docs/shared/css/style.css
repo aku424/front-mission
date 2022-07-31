@@ -2035,13 +2035,40 @@ section:first-child {
   bottom: 0;
 }
 
+.strength .review .swiper-button-next::after,
+.strength .review .swiper-button-prev::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+}
+
 .strength .review .swiper-button-prev {
   left: auto;
   right: 60px;
 }
 
+@media screen and (max-width: 768px) {
+  .strength .review .swiper-button-prev {
+    right: calc(50% + 40px);
+  }
+}
+
+.strength .review .swiper-button-prev::after {
+  content: url(../../../docs/shared/img/icon-strength-01.png);
+}
+
 .strength .review .swiper-button-next {
   right: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .strength .review .swiper-button-next {
+    right: calc(50% - 40px);
+  }
+}
+
+.strength .review .swiper-button-next::after {
+  content: url(../../../docs/shared/img/icon-strength-02.png);
 }
 
 .business .m-mv-inner {
