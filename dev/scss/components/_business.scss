@@ -1,5 +1,5 @@
 .business{
-.m-mv-inner{
+.m-mv-bg{
     background-image: url(../../../docs/shared/img/mv-business-01.png);
 }
 
@@ -46,8 +46,27 @@
     }
 
     &__list--item{
+        display: flex;
+        justify-content: center;
         margin-bottom: 20px;
         font-size: $fz-txt_01;
+        align-items: center;
+
+        &::after,
+        &::before{
+            content: "";
+            width: 8px;
+            height: 1px;
+            background-color: $c-06;
+        }
+
+        &::before{
+            margin-right: 6px;
+        }
+
+        &::after{
+            margin-left: 6px;
+        }
 
         &:last-child{
             margin-bottom: 0;

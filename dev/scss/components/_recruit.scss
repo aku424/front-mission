@@ -1,5 +1,5 @@
 .recruit{
-    .m-mv-inner{
+    .m-mv-bg{
         background-image: url(../../../docs/shared/img/mv-recruit-01.png);
     }
 
@@ -136,6 +136,31 @@
 
                 &--title{
                     @extend %m-title-02;
+                }
+
+                &--text{
+                    dl{
+                        margin-top: 24px;
+                        
+                        dt{
+                            font-weight: bold;
+                            margin-bottom: 4px;
+                        }
+
+                        dd{
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 4px;
+
+                            &::before{
+                                width: 8px;
+                                height: 1px;
+                                background-color: $c-07;
+                                margin-right: 8px;
+                                content:"";
+                            }
+                        }
+                    }
                 }
             }
 
